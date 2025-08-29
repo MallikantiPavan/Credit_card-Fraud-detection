@@ -35,20 +35,19 @@ Deployment: Render (FastAPI) & Streamlit Cloud
 
 Credit_card-Fraud-detection/
 │── backend/
-│   ├── main.py                # FastAPI app
-│   ├── train.py               # Model training script
-│   ├── credit.pkl             # Trained ML model
-│   ├── scaler_amount.pkl      # Amount feature scaler
-│   ├── scaler_time.pkl        # Time feature scaler
-│   ├── requirements.txt       # Backend dependencies
-│   └── start.sh               # Deployment script
+│ ├── main.py # FastAPI app
+│ ├── train.py # Model training script
+│ ├── credit.pkl # Trained ML model
+│ ├── scaler_amount.pkl # Amount feature scaler
+│ ├── scaler_time.pkl # Time feature scaler
+│ ├── requirements.txt # Backend dependencies
+│ └── start.sh # Deployment script
 │
 │── frontend/
-│   ├── index.py               # Streamlit app
-│   └── requirements.txt       # Frontend dependencies
+│ ├── index.py # Streamlit app
+│ └── requirements.txt # Frontend dependencies
 │
 └── README.md
-
 <h3>⚡ How It Works</h3>
 
 User inputs transaction details (time, amount, and features V1–V28).
