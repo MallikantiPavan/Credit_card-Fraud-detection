@@ -17,7 +17,8 @@ with st.expander("Advanced Features (V1–V28)"):
         with col:
             inputs[f"V{i}"] = st.number_input(f"V{i}",0,100)
 
-url = "https://credit-card-fraud-detection-3-ijmr.onrender.com//predict"
+url = "https://credit-card-fraud-detection-3-ijmr.onrender.com/amount_time"
+
 
 if st.button(" Predict"):
     response = requests.post(url, json=inputs)
