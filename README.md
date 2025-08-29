@@ -32,7 +32,7 @@ Model Serialization: Pickle
 Deployment: Render (FastAPI) & Streamlit Cloud
 
 <h3>📂 Project Structure</h3>
-
+'''
 Credit_card-Fraud-detection/
 │── backend/
 │ ├── main.py # FastAPI app
@@ -48,6 +48,8 @@ Credit_card-Fraud-detection/
 │ └── requirements.txt # Frontend dependencies
 │
 └── README.md
+'''
+
 <h3>⚡ How It Works</h3>
 
 User inputs transaction details (time, amount, and features V1–V28).
