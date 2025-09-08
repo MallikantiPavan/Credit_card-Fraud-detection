@@ -6,7 +6,7 @@ st.title(" Credit Card Fraud Detection ")
 inputs = {}
 
 
-inputs["Time"] = st.number_input(" Time",0,100)
+inputs["Time"] = st.number_input(" Time",0,1000)
 inputs["Amount"] = st.number_input(" Amount",0,100)
 
 
