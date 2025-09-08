@@ -46,3 +46,9 @@ if st.button("🔍 Predict"):
             )
     else:
         st.error("❌ Error from backend. Please try again.")
+
+st.markdown("""
+<style>
+st.image("https://imgs.search.brave.com/04uU9w39NIkfP548tZBgj41CtYddh0eq-arJ1uajYL0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAyMS8w/Ny8xMC8xNi8wNC9j/cmVkaXQtY2FyZC02/NDAxNzg2XzY0MC5w/bmc
+</style>
+""")
