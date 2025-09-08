@@ -1,32 +1,48 @@
 import streamlit as st
 import requests
+import numpy as np
 
-st.title(" Credit Card Fraud Detection ")
+st.set_page_config(page_title="Credit Card Fraud Detection", layout="centered")
+
+st.title("💳 Credit Card Fraud Detection")
 
 inputs = {}
 
+inputs["Time"] = st.number_input("After how many seconds did the transaction happen from first transaction:", 0, 1000000)
+inputs["Amount"] = st.number_input("Transaction Amount ($):", 0, 1000000)
 
-inputs["Time"] = st.number_input(" Time",0,1000)
-inputs["Amount"] = st.number_input(" Amount",0,100)
-
-
-with st.expander("Advanced Features (V1–V28)"):
-    cols = st.columns(4)  
-    for i in range(1, 29):
-        col = cols[(i - 1) % 4]  
-        with col:
-            inputs[f"V{i}"] = st.number_input(f"V{i}",0,100)
+for i in range(1, 29):
+    inputs[f"V{i}"] = np.random.uniform(-3, 3)
 
 url = "https://credit-card-fraud-detection-3-ijmr.onrender.com/amount_time"
 
 
-if st.button(" Predict"):
+if st.button("🔍 Predict"):
     response = requests.post(url, json=inputs)
     if response.status_code == 200:
         result = response.json()
+        prob_not_fraud = result['probability_not_fraud']
+        prob_fraud = result['probability_fraud']
+
+        if prob_not_fraud > prob_fraud:
+            
+            st.markdown(
+                f"""
+                <div style='background-color: #2ecc71; padding: 10px; border-radius: 8px; color: white; font-weight: bold;'>
+                    ✅ Transaction is likely <u>NOT fraudulent</u><br>
+                    Not Fraud Probability: {prob_not_fraud*100:.2f}%
+                </div>
+                """, unsafe_allow_html=True
+            )
         
-        st.success(f"Not Fraud Probability: {result['probability_not_fraud']*100:.2f}%")
-        st.warning(f"fraud_Probability: {result['probability_fraud']*100:.2f}%")
-        
+        else:
+            st.markdown(
+                f"""
+                <div style='background-color: red; padding: 10px; border-radius: 8px; color: black; font-weight: bold;'>
+                    ⚠️ Suspicious Transaction Detected<br>
+                    Fraud Probability: {prob_fraud*100:.2f}%
+                </div>
+                """, unsafe_allow_html=True
+            )
     else:
-        st.error(" Error from backend")
+        st.error("❌ Error from backend. Please try again.")
