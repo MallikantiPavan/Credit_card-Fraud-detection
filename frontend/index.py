@@ -47,9 +47,16 @@ if st.button("🔍 Predict"):
     else:
         st.error("❌ Error from backend. Please try again.")
 
-pic="""<style>
-body{
-bacground-image:url("https://imgs.search.brave.com/04uU9w39NIkfP548tZBgj41CtYddh0eq-arJ1uajYL0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAyMS8w/Ny8xMC8xNi8wNC9j/cmVkaXQtY2FyZC02/NDAxNzg2XzY0MC5w/bmc")
+image_url = "https://imgs.search.brave.com/sgYy2NF57p59NSHt7lIU0Q87BpdYOItOX9NxT0M1xuM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAyMS8w/Ny8xMC8xMS8yOS9j/cmVkaXQtY2FyZC02/NDAxMjUwXzY0MC5w/bmc"
 
-         </style>"""
-st.markdown(pic,unsafe_allow_html=True)
+pic = f"""
+<style>
+.stApp {{
+    background-image: url("{image_url}");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}}
+</style>
+"""
+st.markdown(pic, unsafe_allow_html=True)
