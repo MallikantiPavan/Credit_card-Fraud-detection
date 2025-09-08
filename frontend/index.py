@@ -47,7 +47,7 @@ if st.button("🔍 Predict"):
     else:
         st.error("❌ Error from backend. Please try again.")
 
-image_url = "https://imgs.search.brave.com/04uU9w39NIkfP548tZBgj41CtYddh0eq-arJ1uajYL0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAyMS8w/Ny8xMC8xNi8wNC9j/cmVkaXQtY2FyZC02/NDAxNzg2XzY0MC5w/bmc"
+image_url = "https://imgs.search.brave.com/lqaTaLamS5uiGiap3NgfAgnEFWflOukYU9_OAEAIkR8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9iYW5rLXN5c3Rl/bS1jb25jZXB0LXdp/dGgtYmxhY2stZGVi/aXQtY2FyZHMtZGFy/ay1iYWNrZ3JvdW5k/XzY3MDE0Ny0yOTI5/My5qcGc_c2VtdD1h/aXNfaHlicmlkJnc9/NzQwJnE9ODA"
 
 pic = f"""
 <style>
