@@ -12,7 +12,7 @@ Streamlit Frontend: https://creditcard-fraud-detection-9wtcjqfdrxhvfvnj4xptlz.st
 
 <h3>📸 Screenshots</h3>
 <p align="center">
-  <img src="screenshots/frontend.png" width="400"/>
+  <img src="screenshots/backend1.png" width="400"/>
   <img src="screenshots/backend.png" width="400"/>
 </p>
 
