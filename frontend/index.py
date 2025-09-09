@@ -8,8 +8,8 @@ st.title("💳 Credit Card Fraud Detection")
 
 inputs = {}
 
-inputs["Time"] = st.number_input("After how many seconds did the transaction happen from first transaction:", 0, 1000000)
-inputs["Amount"] = st.number_input("Transaction Amount ($):", 0, 1000000)
+inputs["Time"] = st.number_input("After how many seconds did the transaction happen from first transaction:", 0, 1000000,1000)
+inputs["Amount"] = st.number_input("Transaction Amount ($):", 0, 1000000,10000)
 
 for i in range(1, 29):
     inputs[f"V{i}"] = np.random.uniform(-3, 3)
