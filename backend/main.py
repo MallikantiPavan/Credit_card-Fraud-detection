@@ -52,7 +52,7 @@ def amount_time(trans:Credit):
     feature_order = ['Time'] + [f'V{i}' for i in range(1, 29)] + ['Amount']
     df = df[feature_order]
     prediction = model.predict(df)[0]
-    probability = model.predict_proba(df)[0]   # this gives [p(not fraud), p(fraud)]
+    probability = model.predict_proba(df)[0]   
 
     return {
         "prediction": "Fraud" if prediction == 1 else "Not Fraud",
