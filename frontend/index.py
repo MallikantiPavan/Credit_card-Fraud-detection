@@ -14,7 +14,7 @@ inputs["Amount"] = st.number_input("Transaction Amount ($):", 0, 1000000,10000)
 for i in range(1, 29):
     inputs[f"V{i}"] = np.random.uniform(-3, 3)
 
-url = "https://credit-card-fraud-detection-3-ijmr.onrender.com/amount_time"
+url = "https://credit-card-fraud-detection-4-1f0g.onrender.com/amount_time"
 
 
 if st.button("🔍 Predict"):
