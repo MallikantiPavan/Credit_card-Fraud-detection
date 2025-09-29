@@ -4,7 +4,7 @@ import numpy as np
 
 st.set_page_config(page_title="Credit Card Fraud Detection", layout="centered")
 
-st.title("💳 hi Credit Card Fraud Detection")
+st.title("💳 Credit Card Fraud Detection")
 
 inputs = {}
 
