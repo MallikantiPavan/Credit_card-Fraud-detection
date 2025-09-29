@@ -6,7 +6,7 @@ The dataset used is from the Kaggle Credit Card Fraud Detection dataset
 
 <h3>🌐 Live Demo</h3>
 
-FastAPI Backend: https://credit-card-fraud-detection-3-ijmr.onrender.com/
+FastAPI Backend: https://credit-card-fraud-detection-4-1f0g.onrender.com
 
 Streamlit Frontend: https://creditcard-fraud-detection-9wtcjqfdrxhvfvnj4xptlz.streamlit.app/
 
